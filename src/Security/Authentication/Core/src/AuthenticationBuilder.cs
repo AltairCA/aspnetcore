@@ -38,7 +38,7 @@ namespace Microsoft.AspNetCore.Authentication
             });
             if (configureOptions != null)
             {
-                Services.Configure(authenticationScheme, configureOptions);
+                Services.Configure(configureOptions);
             }
             Services.AddOptions<TOptions>(authenticationScheme).Validate(o => {
                 o.Validate(authenticationScheme);
